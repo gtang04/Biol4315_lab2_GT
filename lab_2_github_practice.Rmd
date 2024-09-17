@@ -1,0 +1,7 @@
+---
+title: "Lab 2"
+author: "Gareth Tang"
+date: "`r format(Sys.time(), '%B %d, %Y %a %I:%M %p')`"
+output: html_document
+---
+
