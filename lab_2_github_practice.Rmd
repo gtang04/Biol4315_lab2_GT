@@ -6,3 +6,8 @@ output: html_document
 ---
 
 # GT Rmarkdown Lab 2 Practice
+Load vegan and ggplot2 R packages.
+```{r,load-packages,message=FALSE, warning=FALSE}
+library("ggplot2")
+library("vegan")
+```
