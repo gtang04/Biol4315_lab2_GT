@@ -5,3 +5,4 @@ date: "`r format(Sys.time(), '%B %d, %Y %a %I:%M %p')`"
 output: html_document
 ---
 
+# GT Rmarkdown Lab 2 Practice
