@@ -18,3 +18,9 @@ data(dune)
 dune2 <- dune
 dune_log_tranform <- log1p(dune2)
 ```
+
+Perform non-metric multidimensional scaling on transformed dune data.
+```{r, nmds-dune-data, results='hide'}
+dune2_nmds <- metaMDS(dune2)
+dpoints <- dune2_nmds$point
+```
