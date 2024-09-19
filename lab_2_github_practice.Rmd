@@ -24,3 +24,18 @@ Perform non-metric multidimensional scaling on transformed dune data.
 dune2_nmds <- metaMDS(dune2)
 dpoints <- dune2_nmds$point
 ```
+
+Visualize scaled dune data as a scatter plot. Export plot as a PDF file.
+```{r, plot-scaled-dune-data}
+dpoints_x <- dpoints[,'MDS1']
+dpoints_y <- dpoints[,'MDS2']
+nmds_plot <- ggplot() + 
+  geom_point(mapping = aes(x = dpoints_x, y = dpoints_y)) + 
+  theme_bw() +
+  ggtitle('NMDS Plot of Log Transformed Dune Data') + 
+  labs(x = 'MDS1', y = 'MDS2')+
+  theme(plot.title = element_text(hjust = 0.5))
+
+nmds_plot
+ggsave(filename = 'NMDS_dune2_scatter', plot = nmds_plot, device = 'pdf')
+```
